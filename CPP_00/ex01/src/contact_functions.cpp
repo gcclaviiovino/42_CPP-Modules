@@ -15,9 +15,25 @@ void	Contact::nickname_put(std::string& nickname)
 	this->nickname = nickname;
 }
 
-void	Contact::number_put(std::string& number)
+bool	Contact::number_put(std::string& number)
 {
+	int len = number.length();
+
+	if (len < 10 || len > 15)
+	{
+		std::cout << "Wrong number fromat, please try again." << std::endl;
+		return (false);
+	}
+	for (int i = 0; i < len; i++)
+	{
+		if (!isdigit(number[i]))
+		{
+			std::cout << "A 'phone number' must be a sequence of digits." << std::endl;
+			return (false);
+		}
+	}
 	this->phone_number = number;
+	return (true);
 }
 
 void	Contact::secret_put(std::string& secret)

@@ -24,7 +24,8 @@ void	PhoneBook::add_contact() {
 
 	std::cout << "Enter phone number:" << std::endl;
 	std::cin >> number;
-	new_contact.number_put(number);
+	if (!new_contact.number_put(number))
+		return ;
 
 	std::string	secret;
 

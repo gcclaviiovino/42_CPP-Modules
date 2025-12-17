@@ -2,6 +2,7 @@
 # define CONTACT_H
 
 # include <string>
+# include <stdbool.h>
 
 class Contact {
 	private:
@@ -15,7 +16,7 @@ class Contact {
 	void	firstname_put(std::string& first_name);
 	void	lastname_put(std::string& last_name);
 	void	nickname_put(std::string& nickname);
-	void	number_put(std::string& number);
+	bool	number_put(std::string& number);
 	void	secret_put(std::string& secret);
 
 	std::string firstname_get();
