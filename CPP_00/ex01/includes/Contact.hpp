@@ -22,6 +22,8 @@ class Contact {
 	std::string firstname_get();
 	std::string lastname_get();
 	std::string nickname_get();
+	std::string number_get();
+	std::string secret_get();
 };
 
 #endif

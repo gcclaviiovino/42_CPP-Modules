@@ -20,7 +20,8 @@ class PhoneBook {
 	PhoneBook();
 	void	add_contact();
 	bool	search_contact();
-	void	show_contact(Contact& contact, int id);
+	void	display_contact(Contact& contact, int id);
+	void	show_single_contact(Contact& contact, int id);
 	int		exit_phonebook();
 	void	not_found();
 	void	not_in_range();

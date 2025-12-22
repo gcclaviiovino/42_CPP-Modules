@@ -29,7 +29,7 @@ void	PhoneBook::display_all()
 		return ;
 	int	n_contacts = (this->tot < 8) ? this->tot : 8;
 	for (int i = 0; i < n_contacts; i ++)
-		this->show_contact(this->contacts[i], i);
+		this->display_contact(this->contacts[i], i);
 }
 
 int	PhoneBook::exit_phonebook()

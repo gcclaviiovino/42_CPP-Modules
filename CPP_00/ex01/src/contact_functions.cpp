@@ -55,3 +55,13 @@ std::string	Contact::nickname_get()
 {
 	return (this->nickname);
 }
+
+std::string Contact::number_get()
+{
+	return (this->phone_number);
+}
+
+std::string Contact::secret_get()
+{
+	return (this->darkest_secret);
+}
