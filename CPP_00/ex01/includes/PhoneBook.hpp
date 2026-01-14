@@ -15,6 +15,7 @@ class PhoneBook {
 	int	last_id;
 	int	tot;
 	std::string	format_column(const std::string& text);
+	std::string	justify_center(std::string content, int len);
 
 	public:
 	PhoneBook();

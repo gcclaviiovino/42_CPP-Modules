@@ -49,7 +49,7 @@ bool	PhoneBook::search_contact() {
 	int	id;
 	std::cout << "Now enter the id of the contact you want to display:" << std::endl;
 	std::cin >> id;
-	if (id >= 8)
+	if (id >= 8 || id < 0)
 		return (PhoneBook::not_in_range(), false);
 	if (id > this->tot - 1)
 		return (PhoneBook::not_found(), false);
@@ -57,25 +57,17 @@ bool	PhoneBook::search_contact() {
 	return (true);
 }
 
-void	PhoneBook::display_contact(Contact& contact, int id)
+int	PhoneBook::exit_phonebook()
 {
-	std::ostringstream oss;
-	oss << id;
+	std::string	sure;
+	std::cout << "Your contacts are going to be lost forever. Are you sure you want to exit? (y/n)" << std::endl;
+	std::cin >> sure;
 
-	std::string	id_string = oss.str();
-	std::cout << format_column(id_string) << "|";
-	std::cout << format_column(contact.firstname_get()) << "|";
-	std::cout << format_column(contact.lastname_get()) << "|";
-	std::cout << format_column(contact.nickname_get());
-	std::cout << std::endl;
-}
-
-void	PhoneBook::show_single_contact(Contact& contact, int id)
-{
-	std::cout << "id: " << id << std::endl;
-	std::cout << "firstname: " << contact.firstname_get() << std::endl;
-	std::cout << "lastname: " << contact.lastname_get() << std::endl;
-	std::cout << "nickname: " << contact.nickname_get() << std::endl;
-	std::cout << "phone number: " << contact.number_get() << std::endl;
-	std::cout << "secret: " << contact.secret_get() << std::endl;
+	if (sure == "y" || sure == "Y")
+		std::cout << "K, bye." << std::endl;
+	else if (sure == "n" || sure == "N")
+		std::cout << "Too bad." << std::endl;
+	else
+		std::cout << "Whatever." << std::endl;
+	return (0);
 }
