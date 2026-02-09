@@ -1,4 +1,4 @@
-NAME = unnecessary_violence
+NAME = sed
 RUN = ./$(NAME)
 SENTINEL = .build_completed
 
