@@ -21,7 +21,7 @@ bool	Contact::number_put(std::string& number)
 
 	if (len < 10 || len > 15)
 	{
-		std::cout << "Wrong number fromat, please try again." << std::endl;
+		std::cout << "Wrong number format, please try again." << std::endl;
 		return (false);
 	}
 	for (int i = 0; i < len; i++)

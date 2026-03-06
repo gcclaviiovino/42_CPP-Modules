@@ -46,7 +46,9 @@ void	PhoneBook::display_contact(Contact& contact, int id)
 	std::cout << format_column(contact.lastname_get()) << "|";
 	std::cout << format_column(contact.nickname_get()) << "|";
 	std::cout << std::endl;
-	if (id < last_id)
+
+	int n_contacts = (this->tot < 8) ? this->tot : 8;
+	if (id < n_contacts - 1)
 		std::cout << "--------------------------------------------" << std::endl;
 }
 

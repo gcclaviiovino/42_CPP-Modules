@@ -15,7 +15,7 @@ int main()
 		{
 			std::cout << "Great, let's add a new contact!" << std::endl;
 			if (!new_phonebook.check_contacts())
-				std::cout << "Contact limit (8) has been met, the new contact will substitute the first one." << std::endl;
+				std::cout << "Contact limit (8) has been reached, the new contact will substitute the first one." << std::endl;
 			new_phonebook.add_contact();
 		}
 		else if (command == "SEARCH")
