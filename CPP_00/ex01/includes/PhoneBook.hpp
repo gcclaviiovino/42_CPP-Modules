@@ -29,6 +29,7 @@ class PhoneBook {
 	void	display_all();
 	void	prompt();
 	bool	check_contacts();
+	void	empty_input();
 };
 
 #endif

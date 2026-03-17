@@ -1,22 +1,33 @@
 #include "PhoneBook.hpp"
 
-void	Contact::firstname_put(std::string& firstname)
+bool	Contact::firstname_put(std::string& firstname)
 {
+	if (firstname.empty())
+		return (false);
 	this->firstName = firstname;
+	return (true);
 }
 
-void	Contact::lastname_put(std::string& lastname)
+bool	Contact::lastname_put(std::string& lastname)
 {
+	if (lastname.empty())
+		return (false);
 	this->lastName = lastname;
+	return (true);
 }
 
-void	Contact::nickname_put(std::string& nickname)
+bool	Contact::nickname_put(std::string& nickname)
 {
+	if (nickname.empty())
+		return (false);
 	this->nickname = nickname;
+	return (true);
 }
 
 bool	Contact::number_put(std::string& number)
 {
+	if (number.empty())
+		return (false);
 	int len = number.length();
 
 	if (len < 10 || len > 15)
@@ -36,9 +47,12 @@ bool	Contact::number_put(std::string& number)
 	return (true);
 }
 
-void	Contact::secret_put(std::string& secret)
+bool	Contact::secret_put(std::string& secret)
 {
+	if (secret.empty())
+		return (false);
 	this->darkest_secret = secret;
+	return (true);
 }
 
 std::string	Contact::firstname_get()

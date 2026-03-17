@@ -7,7 +7,7 @@ int main()
 
 	std::cout << "Hello there, welcome to your new phonebook!" << std::endl;
 	new_phonebook.prompt();
-	std::cin >> command;
+	std::getline(std::cin, command);
 
 	while (command != "EXIT")
 	{
@@ -26,7 +26,7 @@ int main()
 		else
 			std::cout << "Command is not in the list." << std::endl;
 		new_phonebook.prompt();
-		std::cin >> command;
+		std::getline(std::cin, command);
 	}
 
 	if (command == "EXIT")

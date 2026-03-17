@@ -12,6 +12,12 @@ void	PhoneBook::not_in_range()
 	std::cout << "Contact id must be in range [0-7]." << std::endl;
 }
 
+void	PhoneBook::empty_input()
+{
+	std::cout << "Error: field cannot be empty." << std::endl;
+	std::cout << "Please try again." << std::endl;
+}
+
 std::string PhoneBook::format_column(const std::string& text)
 {
 	const int	COL_WIDTH = 10;

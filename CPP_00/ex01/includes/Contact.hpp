@@ -13,11 +13,11 @@ class Contact {
 	std::string darkest_secret;
 
 	public:
-	void	firstname_put(std::string& first_name);
-	void	lastname_put(std::string& last_name);
-	void	nickname_put(std::string& nickname);
+	bool	firstname_put(std::string& first_name);
+	bool	lastname_put(std::string& last_name);
+	bool	nickname_put(std::string& nickname);
 	bool	number_put(std::string& number);
-	void	secret_put(std::string& secret);
+	bool	secret_put(std::string& secret);
 
 	std::string firstname_get();
 	std::string lastname_get();
