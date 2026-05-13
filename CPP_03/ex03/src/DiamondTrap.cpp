@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
 DiamondTrap&	DiamondTrap::operator=(const DiamondTrap& other)
 {
 	// std::cout << "Diamond assignment operator called." << std::endl;
-	// add check in all assignment operators!!
+
 	if (this != &other)
 	{
 		ClapTrap::operator=(other);
