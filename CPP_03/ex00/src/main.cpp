@@ -4,20 +4,19 @@ int	main(void)
 {
 	ClapTrap	cool("cool");
 	ClapTrap	copyCool(cool);
-	ClapTrap	assignedCool = cool;
-	ClapTrap	superCool("Super Cool");
+	ClapTrap	assignedCool("assigned");
+
+	assignedCool = cool;
 
 	cool.attack("bench");
-	superCool.takeDamage(5);
-	superCool.beRepaired(3);
-	superCool.attack("wall");
-	cool.takeDamage(6);
+	assignedCool.takeDamage(5);
+	copyCool.takeDamage(6);
 	cool.attack("tree");
 	cool.beRepaired(3);
 	cool.attack("bench");
-	superCool.attack("car");
-	for (int i = 0; i < 9; i++)
+	assignedCool.attack("car");
+	for (int i = 0; i < 7; i++)
 		cool.attack("bench");
-	for (int i = 0; i < 9; i++)
-		superCool.beRepaired(2);
+	for (int i = 0; i < 3; i++)
+		cool.beRepaired(2);
 }
