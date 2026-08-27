@@ -1,4 +1,4 @@
-NAME = BureaucratAForms
+NAME = Interns
 RUN = ./$(NAME)
 SENTINEL = .build_completed
 
@@ -46,11 +46,9 @@ SRC_DIR = src/
 OBJ_DIR = obj/
 
 
-SRC = $(addprefix $(SRC_DIR), main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp)
+SRC = $(addprefix $(SRC_DIR), main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp)
 OBJ = $(SRC:%.cpp=%.o)
 OBJ := $(patsubst $(SRC_DIR)%, $(OBJ_DIR)%, $(OBJ))
-
-TO_CLEAN = tree_shruberry
 
 RM = rm -rf
 
@@ -76,7 +74,6 @@ check_status:
 
 clean:
 	@$(RM) $(OBJ_DIR) $(SENTINEL)
-	@$(RM) $(TO_CLEAN)
 	@echo "$(ESC)$(BOLD);$(ITALIC);$(PINK)💫 All object files cleaned!$(RESET)"
 
 fclean: clean
